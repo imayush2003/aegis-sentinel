@@ -1,5 +1,8 @@
 # 🛡️ Aegis Sentinel — Advanced Cybersecurity & Network Security Suite
 
+[![Live Demo](https://img.shields.io/badge/Demo-Live-green?style=for-the-badge)](https://488e475d50b2e2.lhr.life)
+> **Live URL**: [https://488e475d50b2e2.lhr.life](https://488e475d50b2e2.lhr.life)
+
 Aegis Sentinel is a unified, single-container cybersecurity application designed to provide network analysis, scanning, intelligence gathering, utility generations, and threat detection. Built with a high-performance **FastAPI backend** and a modern, responsive **Vite React frontend**, the application runs as a unified production service serving static assets directly from the backend to eliminate CORS issues and dual-port configurations.
 
 ---
