@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  aegis-sentinel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aegis-sentinel
+    ports:
+      - "8000:8000"
+    environment:
+      - AEGIS_USERNAME=${AEGIS_USERNAME:-admin}
+      - AEGIS_PASSWORD=${AEGIS_PASSWORD:-aegis2024}
+      - PORT=8000
+    # Enable capabilities needed by Scapy for raw network socket sniffing
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    # Note: For Linux deployments, if you want the packet sniffer to capture
+    # host-level packets directly, uncomment the line below and comment out 'ports' above.
+    # network_mode: "host"
+    restart: unless-stopped
